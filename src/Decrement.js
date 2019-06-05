@@ -17,10 +17,24 @@ class Decrement extends Component {
       });
     }
   }
+  IncrementNumber() {
+    let val = this.state.value + 1;
+    this.setState({
+      value: val
+    });
+  }
 
   render() {
     return (
-      <div>
+      <div className="decStyle">
+        <button
+          className="decButton"
+          onClick={e => {
+            this.IncrementNumber();
+          }}
+        >
+          Increment
+        </button>
         {this.state.value}
         <button
           className="decButton"

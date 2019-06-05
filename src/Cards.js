@@ -31,14 +31,11 @@ class Cards extends Component {
   render() {
     var listOfUsers = this.state.users.map(usr => (
       <div key={usr.name + usr.age} className="listItem">
-        Name: {usr.name}, age: {usr.age}
+        <h4>Name: {usr.name}</h4>
+        <h4> age: {usr.age}</h4>
       </div>
     ));
-    return (
-      <div>
-        <ul>{listOfUsers}</ul>
-      </div>
-    );
+    return listOfUsers;
   }
 }
 

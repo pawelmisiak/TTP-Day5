@@ -1,3 +1,9 @@
 .decButton {
   margin: 10px;
 }
+.decStyle {
+  padding: 20px;
+  border: 2px solid white;
+  width: 20%;
+  margin: auto;
+}
