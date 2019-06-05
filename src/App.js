@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import Cards from "./Cards";
+import Decrement from "./Decrement";
 import "./App.css";
 
 class App extends Component {
@@ -41,6 +42,9 @@ class App extends Component {
         </form>
         <div className="cardList">
           <Cards ref={this.child} />
+        </div>
+        <div>
+          <Decrement />
         </div>
       </div>
     );
