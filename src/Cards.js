@@ -1,5 +1,6 @@
 import React from "react";
 import { Component } from "react";
+import "./Cards.css";
 
 class Cards extends Component {
   constructor(props) {
@@ -7,24 +8,31 @@ class Cards extends Component {
     this.state = {
       users: [
         {
-          fname: "Mary",
-          lname: "Poppins",
+          name: "Mary",
           age: 99
         },
         {
-          fname: "Frank",
-          lname: "Gallager",
-          age: 19
+          name: "Bob",
+          age: 102
         }
       ]
     };
   }
 
+  addUser(n, a) {
+    let newUsers = this.state.users;
+    newUsers.push({ name: n, age: a });
+    this.setState({
+      users: newUsers
+    });
+    console.log(this.state.users);
+  }
+
   render() {
     var listOfUsers = this.state.users.map(usr => (
-      <li key={usr.fname}>
-        {usr.fname},{usr.lname},{usr.age}
-      </li>
+      <div key={usr.name + usr.age} className="listItem">
+        Name: {usr.name}, age: {usr.age}
+      </div>
     ));
     return (
       <div>
